@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Combo Checker - Real Time</title>
+</head>
+<body>
+    <h1>Combo List Checker (Real Time)</h1>
+    <form method="post" enctype="multipart/form-data">
+        <input type="file" name="combo" required>
+        <button type="submit">Start</button>
+    </form>
+    {% if results %}
+        <h2>Results:</h2>
+        <ul>
+            <li>Hits: {{ results['hits'] }}</li>
+            <li>Fails: {{ results['fails'] }}</li>
+            <li>Free: {{ results['free'] }}</li>
+            <li>Expired: {{ results['expired'] }}</li>
+        </ul>
+    {% endif %}
+</body>
+</html>
