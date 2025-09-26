@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Crunchyroll Combo Checker</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Crunchyroll Combo Checker</h1>
+        <form method="post" enctype="multipart/form-data" class="upload-form">
+            <label>Combo List (username:password):</label>
+            <input type="file" name="combo" required>
+            <br>
+            <label>Proxy List (optional):</label>
+            <input type="file" name="proxies">
+            <br>
+            <button type="submit">Start Checking</button>
+        </form>
+        {% if results %}
+        <div class="results">
+            <h2>Results</h2>
+            <table>
+                <tr>
+                    <th>Combo</th>
+                    <th>Status</th>
+                    <th>Plan</th>
+                    <th>Expiry</th>
+                    <th>Error</th>
+                </tr>
+                {% for item in results %}
+                <tr>
+                    <td>{{ item.combo }}</td>
+                    <td>{{ item.result.get('Status', '') }}</td>
+                    <td>{{ item.result.get('Plan', '') }}</td>
+                    <td>{{ item.result.get('Expiry', '') }}</td>
+                    <td>{{ item.result.get('error', '') }}</td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
