@@ -1,0 +1,62 @@
+body {
+    background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    max-width: 700px;
+    margin: 40px auto;
+    background: #fff7f5;
+    border-radius: 14px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    padding: 36px 28px;
+}
+h1 {
+    color: #fc6c85;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.upload-form label {
+    font-weight: bold;
+    color: #333;
+}
+.upload-form input[type="file"] {
+    margin-bottom: 8px;
+}
+.upload-form button {
+    background: #fc6c85;
+    color: #fff;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 8px;
+    font-size: 16px;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.upload-form button:hover {
+    background: #e25c72;
+}
+.results {
+    margin-top: 30px;
+}
+.results table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(252,108,133,0.1);
+}
+.results th, .results td {
+    border: 1px solid #fc6c85;
+    padding: 10px;
+    text-align: center;
+}
+.results th {
+    background: #fc6c85;
+    color: #fff;
+}
+.results td {
+    color: #333;
+}
